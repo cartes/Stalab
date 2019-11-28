@@ -296,54 +296,6 @@ function scripts_stalab()
 
 }
 
-function stalab_advanced_search()
-{
-    global $wpdb;
-    $search = $_POST['text'];
-    $searchlike = '%' . $search . '%';
-
-    /** @var $query */
-    $query = $wpdb->get_results(
-        $wpdb->prepare("SELECT DISTINCT ID, post_title, guid FROM $wpdb->posts AS p 
-                                INNER JOIN $wpdb->term_relationships AS tr ON (p.ID = tr.object_id) 
-                                INNER JOIN $wpdb->term_taxonomy AS tt ON (tr.term_taxonomy_id = tt.term_taxonomy_id)
-                                INNER JOIN $wpdb->terms AS t ON (tt.term_id = t.term_id)
-                                INNER JOIN $wpdb->postmeta AS pm ON (p.ID = pm.post_id)
-                                WHERE p.post_status = 'publish' 
-                                AND p.post_type = 'producto'
-                                AND (tt.taxonomy = 'muestra' OR tt.taxonomy = 'campo' OR pm.meta_key = 'aplicacion') 
-                                AND (t.name LIKE '%s' OR pm.meta_value LIKE '%s')", $searchlike, $searchlike)
-    );
-
-    $items = [];
-
-    if (!empty($query)) {
-        foreach ($query as $post) {
-            $item = [
-                "title" => $post->post_title,
-                "id" => $post->ID,
-                "guid" => $post->guid
-            ];
-            $items[] = $item;
-            $searches = get_field('_hiddenSearch', $post->ID);
-            if ($searches) {
-                $searches = (int)$searches;
-                $searches += 1;
-                update_field('_hiddenSearch', $searches, $post->ID);
-            } else {
-                update_field('_hiddenSearch', 1, $post->ID);
-            }
-        }
-        wp_reset_postdata();
-    }
-
-    wp_send_json_success($items);
-
-    die();
-}
-
-add_action('wp_ajax_nopriv_advanced_search', 'stalab_advanced_search');
-add_action('wp_ajax_advanced_search', 'stalab_advanced_search');
 
 function stalab_alphabetic()
 {
