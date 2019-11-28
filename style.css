@@ -1,0 +1,306 @@
+/*
+Theme Name: Eventica WP Child
+Theme URI: http://www.toko.press
+Author: TokoPress
+Author URI: http://www.toko.press/support
+Description: Child Theme Sample for Eventica WP Theme.
+Version: 1.11.1
+Template: eventica-wp    
+Text domain: tokopress;
+License: GPL License
+License URI: license.txt
+Tags: one-column, two-columns, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, theme-options, translation-ready
+*/
+
+body, html {
+    position: relative;
+}
+.img-box {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: block;
+    background: #fff;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #e3e3e3;
+}
+
+.img-box a img {
+    height: 100%;
+    width: auto;
+}
+.equal {
+    display: flex;
+    flex-wrap: wrap;
+}
+.equal [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+    min-height: 60px;
+    padding-bottom: 15px;
+}
+.form-group input#adSearch {
+    border: 0;
+    background-color: #049ae7;
+    margin-top: -47px;
+    padding: 45px 155px;
+    border-radius: 0 !important;
+    color: white !important;
+    font-family: 'Open Sans';
+    font-size: 16px !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+}
+.form-group input#adSearch::placeholder {
+    color: #fff !important;
+}
+.dropdown button#dropdownMenu {
+    padding: 37px;
+    margin-top: -47px;
+    background-color: #9c9ba0;
+    border: 0;
+    border-radius: 0;
+    color: white;
+    font-family: 'Open Sans';
+    font-weight: 900 !important;
+}
+.dropdown-menu.show {
+    position: absolute;
+    will-change: trasnform;
+    left: 0px !important;
+    top: -2px !important;
+    transform: translate3d(0px, 43px, 0px) !important;
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+    text-align: right;
+    background-color: rgba(156, 155, 160, 0.65);
+    z-index: 10;
+}
+.dropdown-menu .dropdown-item {
+    color: #fff !important;
+    border: 0 !important;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #fff !important;
+    text-decoration: none;
+    background-color: #049ae7 !important;
+}
+.list-group-item {
+    background-color: unset !important;
+}
+.listSearch.list-group {
+    width: 100%;
+    background-color: #049ae7 !important;
+    color: #fff;
+    -webkit-box-shadow: inset 0px 2px 3px #999;
+    -moz-box-shadow: inset 0px 2px 3px #999;
+    box-shadow: inset 0px 2px 3px #999;
+    text-align: center !important;
+}
+h3.list-group-item {
+    border-radius: 0 !important;
+    border: none !important;
+}
+h3.list-group-item a {
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 135px;
+}
+.popular {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px dashed rgba(245, 245, 245);
+}
+
+.popular h4 {
+    font-weight: 800 !important;
+    color: #333 !important;
+    margin-left: 10px !important;
+    text-transform: uppercase;
+}
+.popular .columna {
+    display: inline-block;
+}
+
+.popular .columna h5 {
+    padding: 10px 0 !important;
+}
+
+.popular .columna .img-box {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    display: block;
+    background: #fff;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #e3e3e3;
+}
+.popular .columna .img-box img {
+    height: 80%;
+    width: auto;
+}
+.container-archive {
+    min-height: 46vh;
+}
+.container-archive [class*="col-"] .title {
+    padding-bottom: 10px;
+    min-height: 60px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.logoMarca img {
+    max-width: 250px;
+    height: auto;
+}
+#img-table {
+    text-align: center;
+}
+#img-table img {
+    max-width: 90%;
+    height: auto;
+}
+.slider .wpb_text_column.home-anima p {
+    height: 100vh;
+}
+
+.slider .wpb_text_column.home-anima p iframe {
+    height: 100%;
+    min-height: 100%;
+}
+
+a {
+    color: #049ae7;
+}
+
+*:focus {
+    border: none !important;
+    box-shadow: unset !important;
+}
+input:focus, textarea:focus {
+    border: 1px solid #dddddd !important;
+}
+.page-numbers {
+    padding: 3px 10px;
+    border: 1px solid;
+}
+.next.page-numbers, .prev.page-numbers {
+    border: unset;
+}
+
+.vc_btn3.vc_btn3-color-juicy-pink.vc_btn3-style-flat:focus, .vc_btn3.vc_btn3-color-juicy-pink.vc_btn3-style-flat:hover, .vc_btn3.vc_btn3-color-juicy-pink:focus, .vc_btn3.vc_btn3-color-juicy-pink:hover {
+    color: #f7f7f7;
+    background-color: #9C9BA0 !important;
+}
+
+/** Menú alfabético **/
+.alfa-menu {
+    list-style: none;
+    margin: 20px 0px;
+    padding: 0px;
+    width: 100%;
+    border-bottom: 1px solid #9c9ba0;
+}
+.alfa-menu .letter-menu {
+    display: inline-block;
+    margin-bottom: -1px;
+    margin-right: 3px;
+}
+.alfa-menu .letter-menu a,
+.alfa-menu .letter-menu:focus a {
+    display: block;
+    border-left: unset;
+    border-radius: 5px 5px 0px 0px;
+    padding: 10px;
+    margin: 0px;
+    width: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #9c9ba0;
+}
+
+.alfa-menu .letter-menu:hover a {
+    background-color: #7d7c81;
+}
+.alfa-menu .letter-menu:first-child a {
+    border-left: 1px solid #9c9ba0;
+}
+.alfa-menu .letter-menu.current-letter {
+}
+.alfa-menu .letter-menu.current-letter a {
+    color: #fff;
+    background-color: #049ae7;
+}
+.thumb-item-container {
+    border: 1px solid #9c9ba0;
+    width: 212px;
+    height: 212px;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+}
+.thumb-item {
+    max-width: 210px;
+    max-height: 210px;
+}
+
+#img-table > div {
+    display: inline-block;
+    padding-top: 0px;
+}
+#img-table .featured-img {
+    width: 75%;
+    vertical-align: middle;
+}
+#img-table .gallery {
+    width: 25%;
+    vertical-align: middle;
+}
+
+#img-table .gallery figure {
+    border: 1px solid #9c9ba0;
+    margin: 5px;
+}
+.card-img-top {
+    width: auto !important;
+    height: 210px;
+    max-width: 100%;
+}
+.card a {
+    margin: 0 auto;
+}
+
+.quotation-title {
+    font-size: 30px;
+    line-height: 33px;
+}
+.btn-cotizar {
+    border-radius: 10px;
+    padding: 10px 50px;
+    background-color: #9c9ba0;
+    border: unset;
+    color: #fff;
+}
+.btn-cotizar:hover {
+    padding: 10px 50px;
+    background-color: #757479;
+    border: unset;
+    color: #fff;
+}
+.btn-primary {
+    border-radius: 10px;
+    background-color: #049ae7;
+    color: #fff;
+    border: unset;
+    padding: 10px 50px;
+}
+.btn-primary:hover {
+    background-color: #0475b8;
+    color: #fff;
+    border: unset;
+    padding: 10px 50px;
+}
